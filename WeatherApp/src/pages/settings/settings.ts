@@ -1,12 +1,7 @@
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the SettingsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Storage } from '@ionic/storage'
 
 @IonicPage()
 @Component({
@@ -14,12 +9,36 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'settings.html',
 })
 export class SettingsPage {
+  city: string;
+  countryCode: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private storage: Storage
+  ) {
+    this.storage.get('location').then((val) => {
+      if (val != null){
+        let location = JSON.parse(val);
+        this.city = location.city;
+        this.countryCode = location.countryCode;
+      } else {
+        this.city = "London";
+        this.countryCode = "CA";
+      }
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
   }
 
+  saveLocation(){
+    let location = {
+      city: this.city,
+      countryCode: this.countryCode
+    }
+    this.storage.set('location', JSON.stringify(location));
+    this.navCtrl.push(HomePage);
+  }
 }

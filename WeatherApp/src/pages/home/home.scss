@@ -4,8 +4,29 @@ page-home {
         color:color($colors, light);
         margin-top: 40px;
     }
-
-    .toolbar-title{
+    
+    .temp{
+        font-size: 120px;
+        font-family: rubik;
         text-align: center;
+        margin: 0;
+    }
+
+    .desc, .location, .weather-icon{
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 0;
+    }
+
+    .weather-icon img{
+        width: 100px;
+    }
+
+    .weather-desc{
+        margin-bottom: 40px;
+    }
+
+    .location {
+        font-size: 50px;
     }
 }
