@@ -31,23 +31,33 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #6495ed,
+  primary:    rgba(0,0,0,0.8),
   secondary:  #435d8c,
   danger:     #f53d3d,
   light:      #ffffff,
-  dark:       #222
+  dark:       #999999
 );
 
+@font-face {
+  font-family: 'rubik';
+  src: url('../assets/fonts/Rubik-Light.ttf');
+}
+
+*{
+  font-family: 'rubik';
+}
+
 // Top toolbar
-$toolbar-md-background: color($colors, secondary);
+$toolbar-md-background: color($colors,primary);
 
 // Bottom tabs
-$tabs-md-background: color($colors, secondary);
+$tabs-md-background: color($colors,primary);
 $tabs-md-tab-color-active: color($colors, light);
 $tabs-md-tab-color-inactive: color($colors, dark);
+$tabs-md-tab-icon-size: 35px;
+$tabs-md-tab-min-height: 66px;
 
-// Profile 
-$list-md-background-color:color($colors, secondary);
+$list-md-background-color: color($colors,primary);
 $list-md-text-color:color($colors, light);
 
 // App iOS Variables

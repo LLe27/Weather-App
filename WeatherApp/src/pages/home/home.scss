@@ -1,32 +1,46 @@
 page-home {
     .home{
-        background: color($colors, primary);
+        background: url('../assets/background/weather.jpeg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         color:color($colors, light);
-        margin-top: 40px;
     }
-    
     .temp{
-        font-size: 120px;
+        font-size: 90px;
         font-family: rubik;
         text-align: center;
         margin: 0;
     }
-
-    .desc, .location, .weather-icon{
+    .desc, .location, .weather-icon, .date{
         text-align: center;
         text-transform: capitalize;
         margin-bottom: 0;
     }
-
+    .desc {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
     .weather-icon img{
         width: 100px;
     }
-
+    .weather{
+        margin-top: 50px;
+    }
     .weather-desc{
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
-
     .location {
-        font-size: 50px;
+        font-size: 60px;
     }
+    .date {
+        font-size:140%;
+    }
+    .temp, .desc, .location, .weather-icon, .date {
+        text-shadow: 2px 4px 3px rgba(0,0,0,0.7);
+    }
+    .item-md{
+        padding-right: 16px;
+      }
 }

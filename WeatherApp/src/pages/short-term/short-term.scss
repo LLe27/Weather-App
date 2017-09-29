@@ -1,0 +1,43 @@
+page-short-term {
+    .short{
+        background: url('../assets/background/weather.jpeg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color:color($colors, light);
+        margin-bottom: 40px;
+    }
+    // Weather description
+    .location {
+        font-size: 40px;
+    }
+    img.weather-icon {
+        width: 75px;
+    }
+    .desc {
+        text-transform: capitalize;
+        margin-top: 5px;
+        font-size: 115%;
+    }
+    .weather-desc{
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    .icon{
+        background:rgba(0,0,0,0.8);
+        margin-top: 5px;
+        height: 100%;
+    }
+    .location, .forecast{
+        text-shadow: 2px 4px 3px rgba(0,0,0,0.8);
+        margin-top: 0;
+    }
+    // Items
+    .row{
+        margin-bottom: 20px;
+    }
+    .item-md{
+        padding-right: 16px;
+    }
+}

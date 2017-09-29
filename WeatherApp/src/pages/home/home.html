@@ -5,27 +5,24 @@
 </ion-header>
 
 <ion-content padding class="home">
-
   <ion-grid *ngIf="currentWeather">
     <ion-row width-100>
-      <ion-col width-100 offset-25>
+      <ion-col class="weather" width-100 offset-25>
         <h2 class="location">{{ currentWeather.name }}, {{ currentWeather.sys.country }}</h2>
+        <h3 class="date">{{ currentWeather.dt * 1000  | date:'yyyy-MM-dd HH:mm:ss Z' }}</h3>
+        <h3 class="temp">{{ currentWeather.main.temp | number : '1.1-1'  }}&deg;C</h3>
         <div class="weather-icon" *ngFor="let item of currentWeather.weather">
           <img src="http://openweathermap.org/img/w/{{ item.icon }}.png">
           <h3 class="desc">{{ item.description }}</h3>
-          <h3 class="temp">{{ currentWeather.main.temp - 273.15 | number : '1.1-1'  }}&deg;</h3>
         </div>
       </ion-col>
     </ion-row>
     <ion-row class="weather-desc">
       <ion-col width-100>
         <ion-list>
-          <ion-item><strong>Temp: </strong> {{ currentWeather.main.temp - 273.15 | number : '1.1-1'  }}&deg;C ({{ (((9/5) * (currentWeather.main.temp - 273.15)) + 32)
-            | number : '1.1-1' }}&deg;F) </ion-item>
-          <ion-item><strong>Min-Temp: </strong>{{ currentWeather.main.temp_min - 273.15 | number : '1.1-1'  }}&deg;C ({{ (((9/5) * (currentWeather.main.temp_min - 273.15))
-            + 32) | number : '1.1-1' }}&deg;F)</ion-item>
-          <ion-item><strong>Max-Temp: </strong>{{ currentWeather.main.temp_max - 273.15 | number : '1.1-1'  }}&deg;C ({{ (((9/5) * (currentWeather.main.temp_max - 273.15))
-            + 32) | number : '1.1-1' }}&deg;F)</ion-item>
+          <ion-item><strong>Temp: </strong> {{ currentWeather.main.temp | number : '1.1-1'  }}&deg;C ({{ ((currentWeather.main.temp * 1.8) + 32) | number : '1.1-1' }}&deg;F) </ion-item>
+          <ion-item><strong>Min-Temp: </strong>{{ currentWeather.main.temp_min | number : '1.1-1'  }}&deg;C ({{ ((currentWeather.main.temp_min * 1.8) + 32) | number : '1.1-1' }}&deg;F)</ion-item>
+          <ion-item><strong>Max-Temp: </strong>{{ currentWeather.main.temp_max | number : '1.1-1'  }}&deg;C ({{ ((currentWeather.main.temp_max * 1.8) + 32) | number : '1.1-1' }}&deg;F)</ion-item>
           <ion-item><strong>Cloudiness: </strong>{{ currentWeather.clouds.all }}%</ion-item>
           <ion-item><strong>Pressure: </strong>{{ currentWeather.main.pressure }} hpa</ion-item>
           <ion-item><strong>Humidity: </strong>{{ currentWeather.main.humidity }}%</ion-item>

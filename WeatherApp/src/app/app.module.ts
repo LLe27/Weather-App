@@ -1,3 +1,4 @@
+import { ShortTermPage } from './../pages/short-term/short-term';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -8,7 +9,6 @@ import { IonicStorageModule } from '@ionic/storage'
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SettingsPage } from './../pages/settings/settings';
-import { ProfilePage } from './../pages/profile/profile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,8 +19,8 @@ import { WeatherProvider } from '../providers/weather/weather';
     MyApp,
     HomePage,
     TabsPage,
-    ProfilePage,
-    SettingsPage
+    SettingsPage,
+    ShortTermPage
   ],
   imports: [
     BrowserModule,
@@ -33,8 +33,8 @@ import { WeatherProvider } from '../providers/weather/weather';
     MyApp,
     HomePage,
     TabsPage,
-    ProfilePage,
-    SettingsPage
+    SettingsPage,
+    ShortTermPage
   ],
   providers: [
     StatusBar,

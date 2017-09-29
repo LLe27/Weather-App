@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Short-Term Weather Forecast</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="short">
+  <ion-grid class="weather-desc" *ngIf="shortTermWeather">
+    <h2 class="location">{{ shortTermWeather.city.name }}, {{ shortTermWeather.city.country }}</h2>
+    <h2 class="forecast"> 3 Hour Forecast</h2>
+    <ion-row *ngFor="let weather of shortTermWeather.list">
+      <ion-col class="icon" col-4 *ngFor="let item of weather.weather">
+        <img class="weather-icon" src="http://openweathermap.org/img/w/{{ item.icon }}.png">
+        <p class="desc"><strong>{{ item.description }}</strong></p>
+        <p>{{ weather.dt * 1000  | date:'yyyy-MM-dd HH:mm:ss Z' }}</p>
+      </ion-col>
+      <ion-col col-8>
+        <ion-list>
+          <ion-item><strong>Temp: </strong>{{ weather.main.temp | number : '1.1-1' }}&deg;C ({{ ((weather.main.temp * 1.8) + 32) | number : '1.1-1' }}&deg;F)</ion-item>
+          <ion-item><strong>Min Temp: </strong>{{ weather.main.temp_min | number : '1.1-1' }}&deg;C ({{ ((weather.main.temp_min * 1.8) + 32) | number : '1.1-1' }}&deg;F)</ion-item>
+          <ion-item><strong>Max Temp: </strong>{{ weather.main.temp_max | number : '1.1-1' }}&deg;C ({{ ((weather.main.temp_max * 1.8) + 32) | number : '1.1-1' }}&deg;F)</ion-item>
+          <ion-item><strong>Cloudiness: </strong>{{ weather.clouds.all }}%</ion-item>
+          <ion-item><strong>Pressure: </strong>{{ weather.main.pressure }} hpa</ion-item>
+          <ion-item><strong>Humidity: </strong>{{ weather.main.humidity }}%</ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

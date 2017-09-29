@@ -1,13 +1,10 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>settings</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
-<ion-content padding>
+<ion-content padding class="settings">
   <ion-grid>
     <ion-row>
       <ion-col width-100>
@@ -21,13 +18,13 @@
               </ion-input>
             </ion-item>
             <ion-item>
-                <ion-label fixed>
-                  Country Code
-                </ion-label>
-                <ion-input [(ngModel)]="countryCode" name="countryCode" type="text">
-                </ion-input>
-              </ion-item>
-              <button ion-button type="submit" block>Save</button>
+              <ion-label fixed>
+                Country Code
+              </ion-label>
+              <ion-input [(ngModel)]="countryCode" name="countryCode" type="text">
+              </ion-input>
+            </ion-item>
+            <button ion-button type="submit" block>Save</button>
           </form>
         </ion-list>
       </ion-col>
