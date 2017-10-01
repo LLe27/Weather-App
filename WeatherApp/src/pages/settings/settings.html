@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>settings</ion-title>
+    <ion-title>Location Settings</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,14 +11,14 @@
         <ion-list>
           <form (ngSubmit)="saveLocation()">
             <ion-item>
-              <ion-label fixed>
+              <ion-label text-wrap fixed>
                 City
               </ion-label>
               <ion-input [(ngModel)]="city" name="city" type="text">
               </ion-input>
             </ion-item>
             <ion-item>
-              <ion-label fixed>
+              <ion-label text-wrap fixed>
                 Country Code
               </ion-label>
               <ion-input [(ngModel)]="countryCode" name="countryCode" type="text">

@@ -20,12 +20,12 @@
     <ion-row class="weather-desc">
       <ion-col width-100>
         <ion-list>
-          <ion-item><strong>Temp: </strong> {{ currentWeather.main.temp | number : '1.1-1'  }}&deg;C ({{ ((currentWeather.main.temp * 1.8) + 32) | number : '1.1-1' }}&deg;F) </ion-item>
-          <ion-item><strong>Min-Temp: </strong>{{ currentWeather.main.temp_min | number : '1.1-1'  }}&deg;C ({{ ((currentWeather.main.temp_min * 1.8) + 32) | number : '1.1-1' }}&deg;F)</ion-item>
-          <ion-item><strong>Max-Temp: </strong>{{ currentWeather.main.temp_max | number : '1.1-1'  }}&deg;C ({{ ((currentWeather.main.temp_max * 1.8) + 32) | number : '1.1-1' }}&deg;F)</ion-item>
-          <ion-item><strong>Cloudiness: </strong>{{ currentWeather.clouds.all }}%</ion-item>
-          <ion-item><strong>Pressure: </strong>{{ currentWeather.main.pressure }} hpa</ion-item>
-          <ion-item><strong>Humidity: </strong>{{ currentWeather.main.humidity }}%</ion-item>
+          <ion-item text-wrap><strong>Temp: </strong> {{ currentWeather.main.temp | number : '1.1-1'  }}&deg;C ({{ ((currentWeather.main.temp * 1.8) + 32) | number : '1.1-1' }}&deg;F) </ion-item>
+          <ion-item text-wrap><strong>Min-Temp: </strong>{{ currentWeather.main.temp_min | number : '1.1-1'  }}&deg;C ({{ ((currentWeather.main.temp_min * 1.8) + 32) | number : '1.1-1' }}&deg;F)</ion-item>
+          <ion-item text-wrap><strong>Max-Temp: </strong>{{ currentWeather.main.temp_max | number : '1.1-1'  }}&deg;C ({{ ((currentWeather.main.temp_max * 1.8) + 32) | number : '1.1-1' }}&deg;F)</ion-item>
+          <ion-item text-wrap><strong>Cloudiness: </strong>{{ currentWeather.clouds.all }}%</ion-item>
+          <ion-item text-wrap><strong>Pressure: </strong>{{ currentWeather.main.pressure }} hpa</ion-item>
+          <ion-item text-wrap><strong>Humidity: </strong>{{ currentWeather.main.humidity }}%</ion-item>
         </ion-list>
       </ion-col>
     </ion-row>

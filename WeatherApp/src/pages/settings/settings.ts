@@ -39,6 +39,7 @@ export class SettingsPage {
       countryCode: this.countryCode
     }
     this.storage.set('location', JSON.stringify(location));
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.popToRoot();
   }
 }
