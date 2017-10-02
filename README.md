@@ -3,7 +3,7 @@ Fun weather application build using AngularFire2, Ionic 3 and Angular 4
 Short and Sweet weather application built using the Angular4 and Ionic Framework. There may be some issues! But I am still a noobie. Below there are some snapshots of the app on Android and IOS.
 
 # WhoAmIApp
-Small application built using the same technologies as the weather application. Built to learn about AngularFire2 and Firebase functionality. Still a work in progress.
+Small application built using the same technologies as the weather application. Built to learn and become familiar AngularFire2 and Firebase functionality. Still a work in progress.
 
 ## Android Snapshots
 ### Homepage
