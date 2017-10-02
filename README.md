@@ -14,10 +14,10 @@ Short and Sweet weather application built using the Angular4 and Ionic Framework
 
 ## IOS Snapshots
 ### Homepage
-![alt text](https://github.com/LLe27/Weather-App/blob/master/img/ios.png)
+![alt text](https://github.com/LLe27/Weather-App/blob/master/img/ios_home.png)
 
 ### Short Term Forecast
 ![alt text](https://github.com/LLe27/Weather-App/blob/master/img/ios_short_term.png)
 
 ### Settings
-![alt text](https://github.com/LLe27/Weather-App/blob/master/img/ios_settings.png)
+![alt text](https://github.com/LLe27/Weather-App/blob/master/img/ios_setting.png)
