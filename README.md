@@ -15,7 +15,7 @@ Small application built using the same technologies as the weather application. 
 ### Settings
 ![alt text](https://github.com/LLe27/Weather-App/blob/master/img/android_settings.png)
 
-## IOS Snapshots
+## iOS Snapshots
 ### Homepage
 ![alt text](https://github.com/LLe27/Weather-App/blob/master/img/ios_home.png)
 
